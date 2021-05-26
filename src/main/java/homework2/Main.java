@@ -8,21 +8,15 @@ public class Main {
     private static int [] bigArray;
 
     static {
-        bigArray = createBigArray(5);
+        bigArray = createBigArray(100000);
     }
 
     public static void main(String[] args) {
-        display(bigArray);
-        deleteElement(1);
-        display(bigArray);
-        addElement(11111);
-        display(bigArray);
-        int searchElem = 11111;
-        System.out.println(String.format("Index of %d is %d", searchElem, findElement(searchElem)));
-        //bubbleSort();
-        //selectSort();
-        insertSort();
-        display(bigArray);
+        long start = System.currentTimeMillis();
+        // bubbleSort(); // 21624 ms. Array has 100 000 elements
+        //selectSort();  // 7765 ms. Array has 100 000 elements
+        insertSort(); // 2097 ms. Array has 100 000 elements
+        System.out.println(System.currentTimeMillis()-start);
     }
 
     private static void bubbleSort(){
@@ -55,7 +49,7 @@ public class Main {
         for (int i = 1; i < size ; i++) {
             int temp = bigArray[i];
             int index = i;
-            while (index > 0 && bigArray[index-1]>bigArray[i]){
+            while (index > 0 && bigArray[index-1] > temp){
                 bigArray[index] = bigArray[index-1];
                 index--;
             }
