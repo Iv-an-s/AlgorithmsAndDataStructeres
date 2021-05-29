@@ -12,6 +12,8 @@ public interface Stack <E>{
 
     boolean isEmpty();
 
+    boolean isFull();
+
     void display();
 
 }

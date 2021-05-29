@@ -43,15 +43,20 @@ public class StackImpl<E> implements Stack<E>{
     }
 
     @Override
+    public boolean isFull() {
+        return size == data.length;
+    }
+
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < size; i++) {
             sb.append(data[i]);
             if (i < (size-1)){
-                sb.append("-->");
+                sb.append(", ");
             }
-            sb.append("]");
         }
+        sb.append("]");
         return sb.toString();
     }
 
