@@ -13,7 +13,12 @@ public class Test3 {
         System.out.println(stack);
 
         System.out.println("Stack size: " + stack.size());
-        System.out.println("Stack pop: " + removeFromStack(stack));
+        System.out.println("Stack peek: " + stack.peek());
+//        System.out.println("Stack pop: " + removeFromStack(stack));
+
+        while (!stack.isEmpty()){
+            System.out.println(stack.pop());
+        }
     }
 
     private static Integer removeFromStack(Stack<Integer> stack){
