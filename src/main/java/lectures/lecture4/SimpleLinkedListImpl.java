@@ -2,8 +2,8 @@ package lectures.lecture4;
 
 public class SimpleLinkedListImpl<E> implements LinkedList<E> {
 
-    private int size;
-    private Node<E> firstElement;
+    protected int size;
+    protected Node<E> firstElement;
 
 
 // O(1)

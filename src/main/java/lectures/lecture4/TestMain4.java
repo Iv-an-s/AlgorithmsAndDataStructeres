@@ -6,12 +6,13 @@ public class TestMain4 {
     }
 
     private static void testLinkedList() {
-        LinkedList<Integer> linkedList = new SimpleLinkedListImpl<>();
+//        LinkedList<Integer> linkedList = new SimpleLinkedListImpl<>();
+        TwoSideLinkedList<Integer> linkedList = new TwoSideLinkedListImpl<>();
         linkedList.insertFirst(1);
         linkedList.insertFirst(2);
         linkedList.insertFirst(3);
         linkedList.insertFirst(4);
-        linkedList.insertFirst(5);
+        linkedList.insertLast(5);
 
         linkedList.display();
 
