@@ -1,4 +1,4 @@
-package lectures.lecture3stackAndQueue;
+package lectures.lecture3stackAndQueue.stack;
 
 public interface Stack <E>{
 

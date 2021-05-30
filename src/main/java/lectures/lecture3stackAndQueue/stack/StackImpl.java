@@ -1,6 +1,4 @@
-package lectures.lecture3stackAndQueue;
-
-import java.util.Arrays;
+package lectures.lecture3stackAndQueue.stack;
 
 public class StackImpl<E> implements Stack<E>{
 

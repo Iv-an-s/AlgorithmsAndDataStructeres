@@ -1,7 +1,6 @@
-package lectures.lecture3stackAndQueue;
+package lectures.lecture3stackAndQueue.stack;
 
 import java.util.Map;
-import java.util.Set;
 
 public class Brackets {
     private static final String TEXT_EXAMPLE = """
