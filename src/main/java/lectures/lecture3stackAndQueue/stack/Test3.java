@@ -3,12 +3,13 @@ package lectures.lecture3stackAndQueue.stack;
 import lectures.lecture3stackAndQueue.queue.PriorityQueue;
 import lectures.lecture3stackAndQueue.queue.Queue;
 import lectures.lecture3stackAndQueue.queue.QueueImpl;
+import lectures.lecture4.LinkedStackImpl;
 
 public class Test3 {
     public static void main(String[] args) {
-//        testStack();
+        testStack();
 //        testQueue();
-        testPriorityQueue();
+//        testPriorityQueue();
     }
 
     private static void testPriorityQueue() {
@@ -49,7 +50,9 @@ public class Test3 {
     }
 
     private static void testStack() {
-        Stack<Integer> stack = new StackImpl<>(5);
+//        Stack<Integer> stack = new StackImpl<>(5);
+        Stack<Integer> stack = new LinkedStackImpl<>();
+
         System.out.println("Add value 1: " + addToStack(stack, 1));
         System.out.println("Add value 2: " + addToStack(stack, 2));
         System.out.println("Add value 3: " + addToStack(stack, 3));

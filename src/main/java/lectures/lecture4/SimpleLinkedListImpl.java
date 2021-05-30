@@ -6,7 +6,7 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
     private Node<E> firstElement;
 
 
-
+// O(1)
     @Override
     public void insertFirst(E value) {
         Node<E> node = new Node<>(value, firstElement);
@@ -14,6 +14,7 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         size++;
     }
 
+// O(1)
     @Override
     public E removeFirst() {
         if(isEmpty()){
@@ -27,6 +28,7 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         return removedElement.item;
     }
 
+//    O(N)
     @Override
     public boolean remove(E value) {
         Node<E>previous = null;
