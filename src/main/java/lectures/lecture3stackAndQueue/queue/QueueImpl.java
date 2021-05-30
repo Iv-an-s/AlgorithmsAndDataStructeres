@@ -5,11 +5,11 @@ public class QueueImpl<E> implements Queue<E>{
     public static final int HEAD_DEFAULT = 0;
     public static final int TAIL_DEFAULT = -1;
 
-    private final E[] data;
-    private int size;
+    protected final E[] data;
+    protected int size;
 
-    private int tail;
-    private int head;
+    protected int tail;
+    protected int head;
 
 
     @SuppressWarnings("unchecked")
