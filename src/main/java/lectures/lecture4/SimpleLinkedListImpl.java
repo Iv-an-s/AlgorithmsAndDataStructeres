@@ -108,10 +108,33 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new Itr();
     }
 
-    class Node<E>{
+    private class Itr implements Iterator<E>{
+        int cursor;
+        Node<E> node;
+
+        public Itr() {
+            this.cursor = 0;
+            this.node = firstElement;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return cursor!=size();
+        }
+
+        @Override
+        public E next() {
+            Node<E>current = node;
+            this.node = current.next;
+            cursor++;
+            return current.item;
+        }
+    }
+
+    protected class Node<E>{
         E item;
         Node<E> next;
 

@@ -34,14 +34,10 @@ public class DequeImpl<E> extends QueueImpl <E> implements Deque<E> {
         }
         if (tail == TAIL_DEFAULT) {  // невалидное значение, по которому уже нельзя обращаться
             tail = data.length-1;
-            E tempElem = data[tail--];
-            size--;
-            return tempElem;
-        } else {
-            E tempElem = data[tail--];
-            size--;
-            return tempElem;
         }
+        E tempElem = data[tail--];
+        size--;
+        return tempElem;
     }
 
     @Override
