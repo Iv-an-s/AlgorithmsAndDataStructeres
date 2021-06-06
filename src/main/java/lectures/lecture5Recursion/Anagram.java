@@ -12,7 +12,6 @@ public class Anagram {
         Anagram anagram = new Anagram();
         Set<String> anagrams = anagram.findAll("Cat");
         System.out.println(anagrams);
-
     }
 
     private Set<String> findAll(String word) {
@@ -27,18 +26,15 @@ public class Anagram {
         if (length == 1){
             return;
         }
-
-        for (int i = 0; i < length; i++){
-            find(length -1);
-            result.add(String.valueOf(chars));
-            rotate(length);
-
+        for (int i = 0; i < length; i++){  // совершаем столько перестановок, сколько букв в слове
+            find(length -1);        // на каждой итерации вызываем метод find(), куда передаем значение (length - 1)
+            result.add(String.valueOf(chars)); // каждую пересановку фиксируем в сете
+            rotate(length);                // прокручиваем набор букв, сдвигая все на одну букву влево
         }
-
     }
 
     private void rotate(int length) {
-        int pos = chars.length - length;
+        int pos = chars.length - length; // находим индекс первой буквы нашего подслова, которое будем прокручивать
         char temp = chars[pos];
 
         for (int i = pos+1; i < chars.length; i++) {
