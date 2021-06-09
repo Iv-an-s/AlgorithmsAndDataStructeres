@@ -23,5 +23,10 @@ public class Test6 {
         tree.traverse(Tree.TraverseMode.IN_ORDER);
 
         tree.display();
+
+        //tree.remove(55);
+        //tree.remove(42);
+        tree.remove(40);
+        tree.display();
     }
 }
