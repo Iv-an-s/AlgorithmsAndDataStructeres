@@ -1,11 +1,14 @@
 package lectures.aboutArrayList;
 
+import lectures.lecture5Recursion.RecSortedArrayImpl;
+
 public class TestDynamicArray {
 
     public static void main(String[] args) {
 
-        Array<Integer> data = new ArrayImpl<Integer>(4);
+        //Array<Integer> data = new ArrayImpl<Integer>(4);
         //Array<Integer> data = new SortedArrayImpl<>();
+        Array<Integer>data = new RecSortedArrayImpl<>();
 
         data.add(5);
         data.add(4);
@@ -29,7 +32,5 @@ public class TestDynamicArray {
         System.out.println("Find 4: " + data.contains(4));
         System.out.println("Find 2: " + data.contains(2));
         System.out.println("Find 222: " + data.contains(222));
-
-
     }
 }
