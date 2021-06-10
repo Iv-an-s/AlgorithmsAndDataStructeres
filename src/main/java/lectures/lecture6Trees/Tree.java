@@ -2,6 +2,8 @@ package lectures.lecture6Trees;
 
 public interface Tree<E extends Comparable<? super E>> {
 
+    boolean isBalanced();
+
     enum TraverseMode {
         IN_ORDER,  // в порядке возрастания
         PRE_ORDER, // сначала родитель, затем дочерние элементы

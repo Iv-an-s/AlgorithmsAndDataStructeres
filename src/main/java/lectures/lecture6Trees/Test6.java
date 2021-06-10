@@ -3,7 +3,7 @@ package lectures.lecture6Trees;
 public class Test6 {
 
     public static void main(String[] args) {
-        Tree<Integer> tree = new TreeImpl<>();
+        Tree<Integer> tree = new TreeImpl<>(6);
         tree.add(60);
         tree.add(50);
         tree.add(66);
