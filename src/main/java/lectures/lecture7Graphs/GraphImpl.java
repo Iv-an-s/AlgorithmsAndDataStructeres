@@ -4,6 +4,10 @@ import java.util.*;
 
 public class GraphImpl implements Graph{
 
+    public List<Vertex> getVertexList() {
+        return vertexList;
+    }
+
     private final List<Vertex> vertexList;
     private final boolean[][] adjMat; // true - связь есть, false - связи нет.
 
@@ -39,7 +43,7 @@ public class GraphImpl implements Graph{
         return false;
     }
 
-    private int indexOf(String label){
+    public int indexOf(String label){
         for(int i = 0; i < vertexList.size(); i++){
             Vertex vertex = vertexList.get(i);
             if (vertex.getLabel().equals(label)){
@@ -88,13 +92,13 @@ public class GraphImpl implements Graph{
         resetVertexState();
     }
 
-    private void resetVertexState() {
+    public void resetVertexState() {
         for (Vertex vertex : vertexList) {
             vertex.setVisited(false);
         }
     }
 
-    private Vertex getNearestUnvisitedVertex(Vertex current) {
+    public Vertex getNearestUnvisitedVertex(Vertex current) {
         int currentIndex = vertexList.indexOf(current);
         for (int i = 0; i < getSize(); i++) {
             if(adjMat[currentIndex][i] && !vertexList.get(i).isVisited()){
@@ -104,16 +108,20 @@ public class GraphImpl implements Graph{
         return null;
     }
 
-    private void visitVertex(Stack<Vertex> stack, Vertex vertex) {
+    public void visitVertex(Stack<Vertex> stack, Vertex vertex) {
         System.out.println(vertex.getLabel());
         stack.push(vertex);
         vertex.setVisited(true);
     }
 
-    private void visitVertex(Queue<Vertex> queue, Vertex vertex) {
+    public void visitVertex(Queue<Vertex> queue, Vertex vertex) {
         System.out.println(vertex.getLabel());
         queue.add(vertex);
         vertex.setVisited(true);
+    }
+
+    public void unvisitVertex(Vertex vertex) {
+        vertex.setVisited(false);
     }
 
     @Override

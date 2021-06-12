@@ -1,5 +1,9 @@
 package lectures.lecture7Graphs;
 
+import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
+
 public interface Graph {
 
     void addVertex(String label);
@@ -16,7 +20,17 @@ public interface Graph {
 
     void bfs(String startLabel); // breadth-first search, поиск в ширину
 
+    int indexOf(String startLabel);
 
+    List<Vertex> getVertexList();
+
+    void visitVertex(Stack<Vertex> stack, Vertex vertex);
+
+    void visitVertex(Queue<Vertex> queue, Vertex vertex);
+
+    Vertex getNearestUnvisitedVertex(Vertex current);
+
+    void resetVertexState();
 
 
 }

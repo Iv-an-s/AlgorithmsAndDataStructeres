@@ -39,6 +39,10 @@ public class Vertex {
         this.visited = visited;
     }
 
+    public void setUnvisited() {
+        this.visited = false;
+    }
+
     public boolean isVisited() {
         return visited;
     }
